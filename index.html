@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fat Loss Diet Plan Creator • Kerala Meals Edition</title>
+  <meta name="description" content="Generate a personalized, clean 7-day fat loss diet plan exclusively with authentic Kerala meals. 100% in-browser, no login required.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top App Navigation / Header -->
+  <header class="app-header">
+    <div class="container header-content">
+      <div class="logo-group">
+        <div class="logo-icon" aria-hidden="true">
+          <!-- Leaf / Wellness SVG -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="app-title">Fat Loss Diet Plan Creator</div>
+          <div class="app-subtitle">Authentic Kerala Meals • Calorie & Macro Targeted</div>
+        </div>
+      </div>
+
+      <div class="header-badges">
+        <span class="pill-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          No Login Required
+        </span>
+        <span class="pill-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          100% In-Browser
+        </span>
+        <span class="pill-badge accent">
+          🥥 Kerala Meals Only
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+
+      <!-- Hero Header -->
+      <section class="hero-banner">
+        <h1>Transform Your Health With <span>Kerala Naadan Foods</span></h1>
+        <p>
+          Sustainable fat loss without giving up your favorite Kerala staples. Enter your details to get an accurate daily calorie target, water intake guide, and a complete 7-day breakfast, lunch, and dinner meal plan.
+        </p>
+        <button type="button" id="sample-profile-btn" class="sample-profile-btn">
+          <span>💡 Try With Kerala Sample Profile (29yo, 68kg, Pescatarian)</span>
+        </button>
+      </section>
+
+      <!-- Input Form Card -->
+      <section id="input-card" class="app-card">
+        <form id="diet-form" novalidate>
+          <div class="form-section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            1. Your Personal Metrics
+          </div>
+
+          <!-- Basic Stats Grid -->
+          <div class="form-grid">
+            <!-- Gender -->
+            <div class="form-group">
+              <label class="form-label">
+                Gender
+                <span class="label-sub">For metabolic rate (BMR)</span>
+              </label>
+              <div class="gender-toggle-group">
+                <label class="toggle-option">
+                  <input type="radio" name="gender" value="female" checked>
+                  <div class="toggle-box">
+                    <span>👩 Female</span>
+                  </div>
+                </label>
+                <label class="toggle-option">
+                  <input type="radio" name="gender" value="male">
+                  <div class="toggle-box">
+                    <span>👨 Male</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Age -->
+            <div class="form-group">
+              <label for="age" class="form-label">
+                Age
+                <span class="label-sub">Years</span>
+              </label>
+              <div class="input-wrapper">
+                <input type="number" id="age" name="age" class="input-field" min="15" max="100" value="28" required placeholder="e.g. 28">
+                <span class="input-suffix">yrs</span>
+              </div>
+            </div>
+
+            <!-- Weight -->
+            <div class="form-group">
+              <label for="weight" class="form-label">
+                Current Weight
+                <span class="label-sub">In kilograms</span>
+              </label>
+              <div class="input-wrapper">
+                <input type="number" id="weight" name="weight" class="input-field" min="35" max="250" step="0.5" value="70" required placeholder="e.g. 70">
+                <span class="input-suffix">kg</span>
+              </div>
+            </div>
+
+            <!-- Height -->
+            <div class="form-group">
+              <label for="height" class="form-label">
+                Height
+                <span class="label-sub">In centimeters</span>
+              </label>
+              <div class="input-wrapper">
+                <input type="number" id="height" name="height" class="input-field" min="120" max="230" value="165" required placeholder="e.g. 165">
+                <span class="input-suffix">cm</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Activity Level -->
+          <div class="form-section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            2. Daily Activity Level
+          </div>
+          <div class="selection-grid">
+            <label class="selection-card">
+              <input type="radio" name="activityLevel" value="sedentary">
+              <div class="card-box">
+                <div class="card-header">
+                  <span class="card-icon">🛋️</span>
+                  <span class="card-title">Sedentary</span>
+                </div>
+                <div class="card-desc">Desk job, minimal walking, little or no structured workouts.</div>
+                <div class="card-badge">BMR × 1.2</div>
+              </div>
+            </label>
+
+            <label class="selection-card">
+              <input type="radio" name="activityLevel" value="light" checked>
+              <div class="card-box">
+                <div class="card-header">
+                  <span class="card-icon">🚶</span>
+                  <span class="card-title">Lightly Active</span>
+                </div>
+                <div class="card-desc">Light exercise or brisk walking 1 to 3 days per week.</div>
+                <div class="card-badge">BMR × 1.375</div>
+              </div>
+            </label>
+
+            <label class="selection-card">
+              <input type="radio" name="activityLevel" value="moderate">
+              <div class="card-box">
+                <div class="card-header">
+                  <span class="card-icon">🏃</span>
+                  <span class="card-title">Moderately Active</span>
+                </div>
+                <div class="card-desc">Moderate workouts, gym, sports or jogging 3 to 5 days/week.</div>
+                <div class="card-badge">BMR × 1.55</div>
+              </div>
+            </label>
+
+            <label class="selection-card">
+              <input type="radio" name="activityLevel" value="active">
+              <div class="card-box">
+                <div class="card-header">
+                  <span class="card-icon">⚡</span>
+                  <span class="card-title">Very Active</span>
+                </div>
+                <div class="card-desc">Hard physical training, sports, or high activity job 6-7 days/week.</div>
+                <div class="card-badge">BMR × 1.725</div>
+              </div>
+            </label>
+          </div>
+
+          <!-- Food Preference (Kerala Foods Only) -->
+          <div class="form-section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-4.5a1 1 0 0 1-2 0V7a1 1 0 0 1 2 0z"></path></svg>
+            3. Kerala Food Preference
+          </div>
+          <div class="selection-grid">
+            <label class="selection-card">
+              <input type="radio" name="foodPreference" value="nonveg" checked>
+              <div class="card-box">
+                <div class="card-header">
+                  <span class="card-icon">🍗</span>
+                  <span class="card-title">Kerala Non-Veg</span>
+                </div>
+                <div class="card-desc">Meen (fish) curry, naadan chicken, eggs, thoran, and matta rice.</div>
+                <div class="card-badge">Most Flexible & High Protein</div>
+              </div>
+            </label>
+
+            <label class="selection-card">
+              <input type="radio" name="foodPreference" value="pescatarian">
+              <div class="card-box">
+                <div class="card-header">
+                  <span class="card-icon">🐟</span>
+                  <span class="card-title">Kerala Pescatarian</span>
+                </div>
+                <div class="card-desc">Kerala fish curries (Mathi, Ayala), eggs, lentils, and rich veg thorans.</div>
+                <div class="card-badge">Rich in Omega-3 Fats</div>
+              </div>
+            </label>
+
+            <label class="selection-card">
+              <input type="radio" name="foodPreference" value="eggetarian">
+              <div class="card-box">
+                <div class="card-header">
+                  <span class="card-icon">🥚</span>
+                  <span class="card-title">Kerala Eggetarian</span>
+                </div>
+                <div class="card-desc">Mutta roast, naadan omelettes, kadala, cherupayar, and all veg items.</div>
+                <div class="card-badge">Clean Protein + Vegetarian</div>
+              </div>
+            </label>
+
+            <label class="selection-card">
+              <input type="radio" name="foodPreference" value="veg">
+              <div class="card-box">
+                <div class="card-header">
+                  <span class="card-icon">🥗</span>
+                  <span class="card-title">Kerala Pure Veg</span>
+                </div>
+                <div class="card-desc">Cherupayar, Kadala, Aviyal, Thoran, Sambar, Moru, and Kanji.</div>
+                <div class="card-badge">100% Plant & Dairy Based</div>
+              </div>
+            </label>
+          </div>
+
+          <!-- Goal Speed -->
+          <div class="form-section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            4. Fat Loss Goal Speed
+          </div>
+          <div class="selection-grid">
+            <label class="selection-card">
+              <input type="radio" name="goalSpeed" value="slow">
+              <div class="card-box">
+                <div class="card-header">
+                  <span class="card-icon">🌱</span>
+                  <span class="card-title">Gradual & Steady</span>
+                </div>
+                <div class="card-desc">~0.3 to 0.4 kg/week. Gentle calorie deficit, zero hunger.</div>
+                <div class="card-badge">-350 kcal/day</div>
+              </div>
+            </label>
+
+            <label class="selection-card">
+              <input type="radio" name="goalSpeed" value="moderate" checked>
+              <div class="card-box">
+                <div class="card-header">
+                  <span class="card-icon">🎯</span>
+                  <span class="card-title">Standard Fat Loss</span>
+                </div>
+                <div class="card-desc">~0.5 kg/week. The recommended sweet spot for sustainable fat loss.</div>
+                <div class="card-badge">-500 kcal/day (Recommended)</div>
+              </div>
+            </label>
+
+            <label class="selection-card">
+              <input type="radio" name="goalSpeed" value="fast">
+              <div class="card-box">
+                <div class="card-header">
+                  <span class="card-icon">🚀</span>
+                  <span class="card-title">Accelerated Pace</span>
+                </div>
+                <div class="card-desc">~0.75 to 0.8 kg/week. Controlled portions, prioritizes high protein.</div>
+                <div class="card-badge">-750 kcal/day</div>
+              </div>
+            </label>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-primary" id="generate-submit-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+            </svg>
+            Generate My Kerala Fat Loss Plan
+          </button>
+        </form>
+      </section>
+
+      <!-- Results Dashboard Section -->
+      <section id="results-section">
+
+        <!-- Top Results Banner -->
+        <div class="plan-header-banner">
+          <div class="banner-meta">
+            <div class="banner-title-group">
+              <h2>Your Kerala Fat Loss Blueprint</h2>
+              <p>Scientifically balanced calories & macronutrients using 100% traditional Kerala meals.</p>
+            </div>
+            <div class="banner-actions">
+              <button type="button" id="regenerate-btn" class="btn-secondary" title="Create a new 7-day variation">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+                Generate Again
+              </button>
+              <button type="button" id="edit-details-btn" class="btn-secondary" title="Change your inputs">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                Edit Details
+              </button>
+              <button type="button" id="jump-grocery-btn" class="btn-secondary" title="View Weekly Grocery & Market List">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                Grocery List
+              </button>
+              <button type="button" id="copy-plan-btn" class="btn-secondary" title="Copy text to clipboard">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                Copy Plan
+              </button>
+              <button type="button" id="print-plan-btn" class="btn-secondary btn-light" title="Print or save as PDF">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                Print / Save PDF
+              </button>
+            </div>
+          </div>
+
+          <!-- Key Metrics Grid -->
+          <div class="metrics-summary-grid">
+            <div class="metric-stat-card">
+              <div class="metric-stat-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                Target Calories
+              </div>
+              <div class="metric-stat-value" id="stat-target-cal">1,450 kcal</div>
+              <div class="metric-stat-sub" id="stat-deficit">-500 kcal deficit</div>
+            </div>
+
+            <div class="metric-stat-card">
+              <div class="metric-stat-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                Daily Water Intake
+              </div>
+              <div class="metric-stat-value" id="stat-water">2.8 L</div>
+              <div class="metric-stat-sub" id="stat-glasses">~11 glasses / day</div>
+            </div>
+
+            <div class="metric-stat-card">
+              <div class="metric-stat-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                Goal Speed
+              </div>
+              <div class="metric-stat-value" style="font-size: 1.4rem;" id="stat-speed-label">Steady Pace</div>
+              <div class="metric-stat-sub" id="stat-weekly-loss">Target: 0.5 kg/week</div>
+            </div>
+
+            <div class="metric-stat-card">
+              <div class="metric-stat-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                Body Mass Index
+              </div>
+              <div class="metric-stat-value" id="stat-bmi">25.7 BMI</div>
+              <div class="metric-stat-sub" id="stat-bmi-cat">Overweight</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Macronutrients & Hydration Spotlight -->
+        <div class="nutrition-details-grid">
+          <!-- Daily Macros Card -->
+          <div class="detail-card">
+            <div class="detail-card-header">
+              <div class="detail-card-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                Daily Macronutrient Targets
+              </div>
+            </div>
+            <div class="macro-bars">
+              <!-- Protein -->
+              <div class="macro-bar-item">
+                <div class="macro-bar-label">
+                  <span>💪 Protein (Muscle Sparing)</span>
+                  <span id="macro-protein-grams" style="color: #2563eb;">91g (25%)</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-protein" id="bar-protein" style="width: 50%;"></div>
+                </div>
+              </div>
+              <!-- Carbs -->
+              <div class="macro-bar-item">
+                <div class="macro-bar-label">
+                  <span>🌾 Complex Carbs (Matta & Legumes)</span>
+                  <span id="macro-carbs-grams" style="color: #059669;">170g (47%)</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-carbs" id="bar-carbs" style="width: 70%;"></div>
+                </div>
+              </div>
+              <!-- Fats -->
+              <div class="macro-bar-item">
+                <div class="macro-bar-label">
+                  <span>🥥 Healthy Fats (Coconut & Omega-3)</span>
+                  <span id="macro-fat-grams" style="color: #d97706;">45g (28%)</span>
+                </div>
+                <div class="progress-track">
+                  <div class="progress-fill fill-fat" id="bar-fat" style="width: 56%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hydration & Water Quality Card -->
+          <div class="detail-card">
+            <div class="detail-card-header">
+              <div class="detail-card-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                Hydration & Kerala Herbal Waters
+              </div>
+            </div>
+            <div class="water-content-box">
+              <div class="herbal-water-pill" id="herbal-water-suggestion">
+                <!-- Dynamically filled with Jeeraka vellam / Pathimugham -->
+              </div>
+              <p style="font-size: 0.825rem; color: var(--text-muted); line-height: 1.45;">
+                In Kerala's tropical climate, staying hydrated prevents water retention and curbs false hunger pangs. Include 2–3 glasses of warm <strong>Jeeraka Vellam</strong> (cumin water) or <strong>Pathimugham</strong> (pink herbal water) alongside pure water.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- View Controls & Title -->
+        <div class="view-mode-bar">
+          <div class="view-mode-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            7-Day Kerala Meal Plan
+          </div>
+          <div class="view-toggle-btns">
+            <button type="button" id="view-tabs-btn" class="view-toggle-btn active">Tabbed Days</button>
+            <button type="button" id="view-all-btn" class="view-toggle-btn">View All 7 Days</button>
+          </div>
+        </div>
+
+        <!-- Day Tabs -->
+        <div class="day-tabs-wrapper">
+          <div class="day-tabs" id="day-tabs">
+            <!-- Day tab buttons injected by JS -->
+          </div>
+        </div>
+
+        <!-- Meals Container -->
+        <div id="meals-container">
+          <!-- Meal cards injected by JS -->
+        </div>
+
+        <!-- Weekly Grocery & Shopping List Section -->
+        <div class="grocery-section" id="grocery-section">
+          <div class="grocery-header-bar">
+            <div class="grocery-title-group">
+              <div class="grocery-main-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                1-Week Kerala Market & Grocery List
+              </div>
+              <p class="grocery-subtitle">
+                Everything to purchase for your 7-day meal plan. Check off items as you shop in the supermarket or local market!
+              </p>
+            </div>
+            <div class="grocery-actions">
+              <button type="button" id="copy-grocery-btn" class="btn-action-small">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                Copy for WhatsApp
+              </button>
+              <button type="button" id="reset-grocery-btn" class="btn-action-small">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M3 21v-5h5"></path></svg>
+                Reset Checklist
+              </button>
+            </div>
+          </div>
+
+          <!-- Interactive Shopping Progress Indicator -->
+          <div class="grocery-progress-box">
+            <div class="grocery-progress-labels">
+              <span id="grocery-progress-text">Items Bought: 0 of 0</span>
+              <span id="grocery-progress-pct" class="grocery-pct-badge">0% Completed</span>
+            </div>
+            <div class="progress-track" style="height: 8px;">
+              <div class="progress-fill fill-carbs" id="grocery-progress-fill" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <!-- Dynamic Categories Grid -->
+          <div class="grocery-categories-grid" id="grocery-categories-container">
+            <!-- Injected dynamically by JS -->
+          </div>
+        </div>
+
+        <!-- Kerala Cooking Wisdom for Fat Loss -->
+        <div class="wisdom-section">
+          <div class="form-section-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            Kerala Naadan Cooking Wisdom for Fat Loss
+          </div>
+          <div class="wisdom-grid" id="wisdom-tips-grid">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="container">
+      <p><strong>Fat Loss Diet Plan Creator</strong> • Kerala Meals Edition</p>
+      <p>Built with pure web technologies. Runs completely offline in your browser.</p>
+      <div class="disclaimer-text">
+        Note: Nutritional estimates are calculated using standard Indian Food Composition Tables (IFCT) and metabolic formulas. Consult a registered dietitian or doctor for clinical conditions.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/kerala_data.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/generator.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
